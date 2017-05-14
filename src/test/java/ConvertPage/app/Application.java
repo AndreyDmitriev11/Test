@@ -53,6 +53,10 @@ public class Application{
         return Double.parseDouble(converterPage.getOutputField());
     }
 
+    public boolean checkOutputNoData(){return converterPage.checkOutputNoData();}
+
+    public boolean checkOutputZero(){return converterPage.checkOutputZero();}
+
     public Double getConverterRate() {return Double.parseDouble(converterPage.getConverterRate());}
 
     public void WaitOutputRefresh(){converterPage.WaitUntilOutputRefresh();}

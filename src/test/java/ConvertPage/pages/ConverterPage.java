@@ -7,6 +7,12 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import static org.openqa.selenium.support.ui.ExpectedConditions.stalenessOf;
 import java.lang.InterruptedException;
+
+import java.text.NumberFormat;
+import java.text.ParseException;
+
+import java.util.Locale;
+import java.text.DecimalFormat;
 /**
  * Created by Андрей on 10.05.2017.
  */
@@ -82,7 +88,11 @@ public class ConverterPage extends Page{
     }
 
     public String getOutputField(){
-        return OutputField.getAttribute("value");
+
+        String innerText = OutputField.getAttribute("value");
+        String stringOutputField = innerText.replaceAll("[^0-9?!\\.]","");
+        return stringOutputField;
+
     }
 
     public String getConverterRate(){
@@ -117,6 +127,25 @@ public class ConverterPage extends Page{
             }
             catch (InterruptedException e){
                 Thread.currentThread().interrupt();}
+        }
+    }
+
+    public boolean checkOutputNoData(){
+        if(OutputField.getAttribute("value").equals("Нет данных")){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+
+    public boolean checkOutputZero(){
+        if(OutputField.getAttribute("value").equals("0")){
+            return true;
+        }
+        else {
+            return false;
         }
     }
 

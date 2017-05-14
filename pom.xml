@@ -4,17 +4,29 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <!--<parent>-->
+        <!--<groupId>ru.yandex.qatools.allure</groupId>-->
+        <!--<artifactId>allure-examples-parent</artifactId>-->
+        <!--<version>1.0</version>-->
+    <!--</parent>-->
+
     <!--created as a Maven artifact-->
     <groupId>org.apache.maven</groupId>
     <artifactId>testkForLuxoft</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <allure.version>1.4.16</allure.version>
+        <allure.version>1.5.2</allure.version>
         <aspectj.version>1.8.5</aspectj.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
+    <name>Allure Tests for Loxoft</name>
+    <description>Allure, TestNG, PageObject, WebDriver Usage</description>
+
     <dependencies>
+
 
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
         <dependency>
@@ -23,13 +35,13 @@
             <version>3.3.1</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.testng/testng -->
-        <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>6.8</version>
-            <scope>test</scope>
-        </dependency>
+        <!--&lt;!&ndash; https://mvnrepository.com/artifact/org.testng/testng &ndash;&gt;-->
+        <!--<dependency>-->
+            <!--<groupId>org.testng.annotations.Test</groupId>-->
+            <!--<artifactId>testng</artifactId>-->
+            <!--<version>6.8</version>-->
+            <!--<scope>test</scope>-->
+        <!--</dependency>-->
 
         <dependency>
             <groupId>ru.yandex.qatools.allure</groupId>
@@ -42,6 +54,20 @@
                 </exclusion>
             </exclusions>
         </dependency>
+
+        <!--to fix problem with  Failed to load class "org.slf4j.impl.StaticLoggerBinder"'-->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.5</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>1.6.4</version>
+        </dependency>
+
+
 
     </dependencies>
 
@@ -57,12 +83,6 @@
                     <argLine>
                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                     </argLine>
-                    <properties>
-                        <property>
-                            <name>listener</name>
-                            <value>ru.yandex.qatools.allure.junit.AllureRunListener</value>
-                        </property>
-                    </properties>
                 </configuration>
                 <dependencies>
                     <dependency>
@@ -72,6 +92,20 @@
                     </dependency>
                 </dependencies>
             </plugin>
+
+            <!--Needed only to show reports locally. Run jetty:run and
+            open localhost:8080 to show the report-->
+            <plugin>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>9.2.10.v20150310</version>
+                <configuration>
+                    <webAppSourceDirectory>${project.build.directory}/site/allure-maven-plugin</webAppSourceDirectory>
+                    <stopKey>stop</stopKey>
+                    <stopPort>1234</stopPort>
+                </configuration>
+            </plugin>
+
         </plugins>
     </build>
 
@@ -83,6 +117,10 @@
                 <groupId>ru.yandex.qatools.allure</groupId>
                 <artifactId>allure-maven-plugin</artifactId>
                 <version>2.5</version>
+                <configuration>
+                    <resultsDirectory>allure-results</resultsDirectory>
+                    <reportDirectory>allure-report</reportDirectory>
+                </configuration>
             </plugin>
         </plugins>
     </reporting>
