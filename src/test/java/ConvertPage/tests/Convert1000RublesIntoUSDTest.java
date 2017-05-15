@@ -11,7 +11,7 @@ import static java.util.concurrent.TimeUnit.SECONDS;
 /**
  * Created by Андрей on 10.05.2017.
  */
-public class Conver1000RublesIntoUSDTest extends TestBase{
+public class Convert1000RublesIntoUSDTest extends TestBase{
 
     @Test
     public void Convert1000RURtoUSDTest(){

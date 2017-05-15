@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 /**
  * Created by Андрей on 14.05.2017.
  */
-public class Conver0RublesIntoUSDTest extends TestBase {
+public class Convert0RublesIntoUSDTest extends TestBase {
 
     @Test
     public void Convert0RURtoUSDTest(){

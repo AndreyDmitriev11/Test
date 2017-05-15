@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="ALL_TESTS">
+    <test name="Converter test suite">
+        <classes>
+            <class name="ConvertPage.tests.Convert0RublesIntoUSDTest"/>
+            <class name="ConvertPage.tests.Convert1000RublesIntoUSDTest"/>
+            <class name="ConvertPage.tests.Convert000000001RubelsIntoUSDTest"/>
+            <class name="ConvertPage.tests.Convert9999999999RublesIntoUSDTest"/>
+            <class name="ConvertPage.tests.Convert001RubelsIntoUSDTest"/>
+        </classes>
+    </test>
+</suite>
