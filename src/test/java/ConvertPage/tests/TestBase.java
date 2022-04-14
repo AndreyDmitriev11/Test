@@ -24,6 +24,7 @@ public class TestBase {
     @BeforeClass
     public void start() {
 
+        //this is test
         //this part is a trick for access https like real user
         System.setProperty("webdriver.chrome.driver","C:\\Users\\MO\\IdeaProjects\\Test\\resources\\chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
