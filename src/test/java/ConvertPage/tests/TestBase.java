@@ -26,9 +26,9 @@ public class TestBase {
 
         //this is test
         //this part is a trick for access https like real user
-        System.setProperty("webdriver.chrome.driver","J:\\Tools\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver","C:\\Users\\MO\\IdeaProjects\\Test\\resources\\chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("user-data-dir=C:/Users/Андрей/AppData/Local/Google/Chrome/User Data");
+        options.addArguments("user-data-dir=C:/Users/MO/AppData/Local/Google/Chrome/User Data");
         options.addArguments("--start-maximized");
 
         driver = new ChromeDriver(options);
