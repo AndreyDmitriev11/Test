@@ -3,8 +3,11 @@ package ConvertPage.pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.temporal.ChronoUnit;
+
 /**
  * Created by Андрей on 10.05.2017.
+ * Updated by Александр on 17.04.2022.
  */
 public class Page {
 
@@ -15,6 +18,6 @@ public class Page {
         this.driver = driver;
 
         //set explicit wait
-        wait = new WebDriverWait(driver, 10);
+        wait = new WebDriverWait(driver, java.time.Duration.of(10L, ChronoUnit.SECONDS) );
     }
 }

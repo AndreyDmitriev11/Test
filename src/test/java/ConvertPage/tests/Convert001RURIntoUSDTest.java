@@ -5,13 +5,14 @@ import org.testng.annotations.Test;
 
 /**
  * Created by Андрей on 14.05.2017.
+ * Updated by Александр on 17.04.2022.
  */
-public class Convert9999999999RublesIntoUSDTest extends TestBase{
+public class Convert001RURIntoUSDTest extends  TestBase {
 
     @Test
-    public void Convert9999999999RURtoUSDTest(){
+    public void Convert001RURtoUSDTest(){
 
-        String inputCurrencyString = "9999999999";
+        String inputCurrencyString = "0.01";
 
 
         app.openConverterPage();
@@ -31,5 +32,4 @@ public class Convert9999999999RublesIntoUSDTest extends TestBase{
 
 
     }
-
 }

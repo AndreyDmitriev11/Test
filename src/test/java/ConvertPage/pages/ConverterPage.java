@@ -15,6 +15,7 @@ import java.util.Locale;
 import java.text.DecimalFormat;
 /**
  * Created by Андрей on 10.05.2017.
+ * Updated by Александр on 17.04.2022.
  */
 public class ConverterPage extends Page{
 
@@ -45,6 +46,12 @@ public class ConverterPage extends Page{
 
     @FindBy(xpath = "//*[@class='calc__side'][2]//*[text() = 'EUR']")
     private WebElement EURtoBuy;
+
+    @FindBy(xpath = "//*[@class='calc__side'][1]//*[text() = 'GBP']")
+    private WebElement GBPtoSell;
+
+    @FindBy(xpath = "//*[@class='calc__side'][2]//*[text() = 'GBP']")
+    private WebElement GBPtoBuy;
 
     @FindBy(xpath = "(//*[@class='calc__input_box__input js-converter-input'])[1]")
     private WebElement InputField;
@@ -80,6 +87,14 @@ public class ConverterPage extends Page{
 
     public void setEURtoBuy(){
         EURtoBuy.click();
+    }
+
+    public void setGBPtoSell(){
+        GBPtoSell.click();
+    }
+
+    public void setGBPtoBuy(){
+        GBPtoBuy.click();
     }
 
     public void setInputField(CharSequence newVal){
@@ -131,7 +146,7 @@ public class ConverterPage extends Page{
     }
 
     public boolean checkOutputNoData(){
-        if(OutputField.getAttribute("value").equals("Нет данных")){
+        if(OutputField.getAttribute("value").equals("")){
             return true;
         }
         else {

@@ -1,22 +1,25 @@
 package ConvertPage.tests;
 
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
+//import ru.yandex.qatools.allure.annotations.Step;
+
 
 /**
- * Created by Андрей on 14.05.2017.
+ * Created by Александр on 17.04.2022.
  */
-public class Convert001RubelsIntoUSDTest extends  TestBase {
+public class Convert1000GBPIntoEURTest extends TestBase{
 
     @Test
-    public void Convert001RURtoUSDTest(){
+    public void Convert1000GBPtoEURTest(){
 
-        String inputCurrencyString = "0.01";
+        String inputCurrencyString = "1000";
 
 
         app.openConverterPage();
-        app.setRURtoSell();
-        app.setUSDtoBuy();
+        app.setGBPtoSell();
+        app.setEURtoBuy();
         app.setInputCurrency(inputCurrencyString);
 
         //output does not change immediately, wait for it
@@ -31,4 +34,6 @@ public class Convert001RubelsIntoUSDTest extends  TestBase {
 
 
     }
+
+
 }

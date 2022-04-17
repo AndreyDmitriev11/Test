@@ -9,8 +9,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 import ConvertPage.app.Application;
+
+import java.time.temporal.ChronoUnit;
+
 /**
  * Created by Андрей on 10.05.2017.
+ * Updated by Александр on 17.04.2022.
  */
 
 public class TestBase {
@@ -32,7 +36,7 @@ public class TestBase {
         options.addArguments("--start-maximized");
 
         driver = new ChromeDriver(options);
-        wait = new WebDriverWait(driver, 10);
+        wait = new WebDriverWait(driver, java.time.Duration.of(10L, ChronoUnit.SECONDS) );
         app = new Application(driver);
 
     }

@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 
 /**
  * Created by Андрей on 10.05.2017.
+ * Updated by Александр on 17.04.2022.
  */
 public class Application{
 
@@ -41,9 +42,11 @@ public class Application{
         converterPage.setEURtoSell();
     }
 
-    public void setEURtoBuy(){
-        converterPage.setEURtoBuy();
-    }
+    public void setEURtoBuy(){converterPage.setEURtoBuy();}
+
+    public void setGBPtoSell(){converterPage.setGBPtoSell();}
+
+    public void setGBPtoBuy(){converterPage.setGBPtoBuy();}
 
     public void setInputCurrency(CharSequence newVal){
         converterPage.setInputField(newVal);

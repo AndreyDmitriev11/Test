@@ -1,27 +1,22 @@
 package ConvertPage.tests;
 
-
-import ConvertPage.app.Application;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import ru.yandex.qatools.allure.annotations.Step;
-
-import static java.util.concurrent.TimeUnit.SECONDS;
 
 /**
- * Created by Андрей on 10.05.2017.
+ * Created by Александр on 17.04.2022.
  */
-public class Convert1000RublesIntoUSDTest extends TestBase{
+public class Convert001USDIntoRURTest extends  TestBase {
 
     @Test
-    public void Convert1000RURtoUSDTest(){
+    public void Convert001USDtoRURTest(){
 
-        String inputCurrencyString = "1000";
+        String inputCurrencyString = "0.01";
 
 
         app.openConverterPage();
-        app.setRURtoSell();
-        app.setUSDtoBuy();
+        app.setUSDtoSell();
+        app.setRURtoBuy();
         app.setInputCurrency(inputCurrencyString);
 
         //output does not change immediately, wait for it
@@ -36,6 +31,4 @@ public class Convert1000RublesIntoUSDTest extends TestBase{
 
 
     }
-
-
 }

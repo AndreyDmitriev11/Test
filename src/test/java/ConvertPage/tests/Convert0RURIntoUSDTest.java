@@ -5,8 +5,9 @@ import org.testng.annotations.Test;
 
 /**
  * Created by Андрей on 14.05.2017.
+ * Updated by Александр on 17.04.2022.
  */
-public class Convert0RublesIntoUSDTest extends TestBase {
+public class Convert0RURIntoUSDTest extends TestBase {
 
     @Test
     public void Convert0RURtoUSDTest(){
@@ -22,8 +23,8 @@ public class Convert0RublesIntoUSDTest extends TestBase {
         //output does not change immediately, wait for it
         app.WaitOutputRefresh();
 
-        boolean checkResult = app.checkOutputNoData();
-        Assert.assertTrue(checkResult,"Expect 'No data' result");
+        boolean checkResult = app.checkOutputZero();
+        Assert.assertTrue(checkResult,"Expect 'Zero' result");
 
     }
 }
