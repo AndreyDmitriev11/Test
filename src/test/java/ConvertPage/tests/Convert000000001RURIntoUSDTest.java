@@ -4,14 +4,14 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 /**
- * Created by Андрей on 14.05.2017.
+ * Created by Андрей on 15.05.2017.
  */
-public class Convert0RublesIntoUSDTest extends TestBase {
+public class Convert000000001RURIntoUSDTest extends  TestBase {
 
     @Test
-    public void Convert0RURtoUSDTest(){
+    public void Convert000000001RURtoUSDTest(){
 
-        String inputCurrencyString = "0";
+        String inputCurrencyString = "0.00000001";
 
 
         app.openConverterPage();
@@ -26,4 +26,5 @@ public class Convert0RublesIntoUSDTest extends TestBase {
         Assert.assertTrue(checkResult,"Expect 'No data' result");
 
     }
+
 }

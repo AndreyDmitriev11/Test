@@ -41,9 +41,11 @@ public class Application{
         converterPage.setEURtoSell();
     }
 
-    public void setEURtoBuy(){
-        converterPage.setEURtoBuy();
-    }
+    public void setEURtoBuy(){converterPage.setEURtoBuy();}
+
+    public void setGBPtoSell(){converterPage.setGBPtoSell();}
+
+    public void setGBPtoBuy(){converterPage.setGBPtoBuy();}
 
     public void setInputCurrency(CharSequence newVal){
         converterPage.setInputField(newVal);

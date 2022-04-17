@@ -3,11 +3,15 @@
 <suite name="ALL_TESTS">
     <test name="Converter test suite">
         <classes>
-            <class name="ConvertPage.tests.Convert0RublesIntoUSDTest"/>
-            <class name="ConvertPage.tests.Convert1000RublesIntoUSDTest"/>
-            <class name="ConvertPage.tests.Convert000000001RubelsIntoUSDTest"/>
-            <class name="ConvertPage.tests.Convert9999999999RublesIntoUSDTest"/>
-            <class name="ConvertPage.tests.Convert001RubelsIntoUSDTest"/>
+            <class name="ConvertPage.tests.Convert0RURIntoUSDTest"/>
+            <class name="ConvertPage.tests.Convert1000RURIntoUSDTest"/>
+            <class name="ConvertPage.tests.Convert1000EURIntoUSDTest"/>
+            <class name="ConvertPage.tests.Convert1000GBPIntoEURTest"/>
+            <class name="ConvertPage.tests.Convert1000USDIntoGBPTest"/>
+            <class name="ConvertPage.tests.Convert000000001RURIntoUSDTest"/>
+            <class name="ConvertPage.tests.Convert9999999999RURIntoUSDTest"/>
+            <class name="ConvertPage.tests.Convert001RURIntoUSDTest"/>
+            <class name="ConvertPage.tests.Convert001USDIntoRURTest"/>
         </classes>
     </test>
 </suite>

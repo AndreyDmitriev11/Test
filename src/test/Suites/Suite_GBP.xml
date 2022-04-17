@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="GBP_TESTS">
+    <test name="Converter test suite">
+        <classes>
+            <class name="ConvertPage.tests.Convert1000GBPIntoEURTest"/>
+            <class name="ConvertPage.tests.Convert1000USDIntoGBPTest"/>
+        </classes>
+    </test>
+</suite>
