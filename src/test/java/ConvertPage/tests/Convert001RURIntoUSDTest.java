@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 
 /**
  * Created by Андрей on 14.05.2017.
+ * Updated by Александр on 17.04.2022.
  */
 public class Convert001RURIntoUSDTest extends  TestBase {
 

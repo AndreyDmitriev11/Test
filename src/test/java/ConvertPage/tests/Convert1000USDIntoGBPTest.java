@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 
 /**
- * Created by Андрей on 10.05.2017.
+ * Created by Александр on 17.04.2022.
  */
 public class Convert1000USDIntoGBPTest extends TestBase{
 

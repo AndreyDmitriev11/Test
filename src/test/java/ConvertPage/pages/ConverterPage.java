@@ -15,6 +15,7 @@ import java.util.Locale;
 import java.text.DecimalFormat;
 /**
  * Created by Андрей on 10.05.2017.
+ * Updated by Александр on 17.04.2022.
  */
 public class ConverterPage extends Page{
 
